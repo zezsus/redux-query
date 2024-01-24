@@ -1,0 +1,49 @@
+/** @format */
+
+.cartNotFound {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.cartPage {
+  max-height: 89vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  overflow: auto;
+  padding: 1rem;
+
+  .listCartItem {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .cartItem {
+      display: flex;
+      gap: 2.5rem;
+      justify-content: space-between;
+      align-items: center;
+
+      img {
+        width: 2rem;
+        cursor: pointer;
+      }
+
+      span {
+        cursor: pointer;
+        width: 50%;
+      }
+
+      svg {
+        color: red;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+    }
+  }
+}

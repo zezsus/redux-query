@@ -1,0 +1,66 @@
+/** @format */
+
+.productDetailPage {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  box-sizing: border-box;
+  max-height: 90vh;
+  overflow: auto;
+
+
+  .productDetailHeader {
+    padding: 0.3rem;
+
+    svg {
+      cursor: pointer;
+    }
+  }
+
+  .productDetailBody {
+    display: flex;
+    gap: 2rem;
+
+    .imageProduct {
+      max-width: 350px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .contentProduct {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      max-width: 60%;
+
+      .action {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 1rem;
+
+        .btnBuy,
+        .btnAddToCart {
+          padding: 0.5rem 1.5rem;
+          border: none;
+          border-radius: 10px;
+          font-weight: bold;
+          font-size: 1rem;
+          text-transform: capitalize;
+          cursor: pointer;
+        }
+
+        .btnBuy {
+          background-color: blue;
+          color: white;
+        }
+
+        .btnAddToCart {
+          background-color: orange;
+          color: white;
+        }
+      }
+    }
+  }
+}
