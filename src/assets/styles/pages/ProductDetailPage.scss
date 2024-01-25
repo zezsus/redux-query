@@ -8,7 +8,6 @@
   max-height: 90vh;
   overflow: auto;
 
-
   .productDetailHeader {
     padding: 0.3rem;
 
@@ -20,9 +19,11 @@
   .productDetailBody {
     display: flex;
     gap: 2rem;
+    padding: 0 2rem;
+    box-sizing: border-box;
 
     .imageProduct {
-      max-width: 350px;
+      max-width: 300px;
 
       img {
         width: 100%;

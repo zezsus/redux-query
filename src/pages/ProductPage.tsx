@@ -52,9 +52,12 @@ const ProductPage = () => {
   return (
     <div className='productPage'>
       <div className='productPageHeader'>
-        {listCategory.map((category: string) => {
+        {listCategory.map((category: string, index: number) => {
           return (
-            <div className='category' onClick={() => handleFilter(category)}>
+            <div
+              className='category'
+              key={index}
+              onClick={() => handleFilter(category)}>
               {category}
             </div>
           );
@@ -79,6 +82,18 @@ const ProductPage = () => {
                   <FaStar />
                   {product.rating.rate}
                 </span>
+              </div>
+              <div className='listProductFooter'>
+                <button
+                  className='btnEdit'
+                  onClick={() => navigate(`/editProduct/${product.id}`)}>
+                  Edit
+                </button>
+                <button
+                  className='btnDetail'
+                  onClick={() => handleDetailProduct(product.id)}>
+                  Detail
+                </button>
               </div>
             </div>
           );

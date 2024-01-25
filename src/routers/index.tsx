@@ -1,5 +1,7 @@
 /** @format */
 
+import AddProductComponent from "../components/AddProductComponent";
+import EditProductComponent from "../components/EditProductComponent";
 import CartPage from "../pages/CartPage";
 import HomePage from "../pages/HomePage";
 import LoginPage from "../pages/LoginPage";
@@ -22,6 +24,18 @@ export const routers = [
     path: "/product/:id",
     page: ProductDetailPage,
     isShowNav: true,
+  },
+
+  {
+    path: "/editProduct/:id",
+    page: EditProductComponent,
+    isShowNav: false,
+  },
+
+  {
+    path: "/addProduct",
+    page: AddProductComponent,
+    isShowNav: false,
   },
 
   {

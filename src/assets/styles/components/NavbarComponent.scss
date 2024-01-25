@@ -2,71 +2,98 @@
 
 .navbarComponent {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  background-color: orange;
+  flex-direction: column;
   box-sizing: border-box;
 
-  .navHeader {
-    h2 {
-      cursor: pointer;
-    }
-  }
-  .navBody {
-    width: 60%;
+  .navbarContent {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    background-color: orange;
 
-    .cart {
+    .navHeader {
+      h2 {
+        cursor: pointer;
+      }
+    }
+    .navBody {
+      width: 60%;
       display: flex;
-      position: relative;
+      justify-content: space-between;
+
+      .action {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        .btnAddProduct {
+          border: none;
+          background-color: blue;
+          padding: 0.5rem 1rem;
+          border-radius: 10px;
+          color: white;
+          font-weight: bold;
+          cursor: pointer;
+        }
+      }
+
+      .cart {
+        display: flex;
+        position: relative;
+        cursor: pointer;
+
+        svg {
+          color: white;
+
+          font-size: 2rem;
+        }
+
+        span {
+          position: absolute;
+          border: 1px solid orange;
+          border-radius: 100%;
+          display: flex;
+          align-items: center;
+          padding: 0 0.2rem;
+          left: 25px;
+          bottom: 20px;
+          background-color: rgb(255, 255, 255);
+          color: orange;
+        }
+      }
+    }
+
+    .navFooter {
       cursor: pointer;
 
       svg {
-        color: white;
-
-        font-size: 2rem;
+        border: none;
+        color: red;
+        cursor: pointer;
+        font-size: 1.5rem;
       }
 
       span {
-        position: absolute;
-        border: 1px solid orange;
-        border-radius: 100%;
-        display: flex;
-        align-items: center;
-        padding: 0 0.2rem;
-        left: 25px;
-        bottom: 20px;
-        background-color: rgb(255, 255, 255);
-        color: orange;
+        font-size: 1rem;
+        cursor: pointer;
+        text-transform: capitalize;
+        max-width: max-content;
       }
-    }
-  }
 
-  .navFooter {
-    svg {
-      border: none;
-      color: red;
-      cursor: pointer;
-      font-size: 1.5rem;
-    }
+      .btnLogin {
+        border: none;
+        background-color: green;
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 10px;
+        cursor: pointer;
 
-    span {
-      font-size: 1rem;
-      text-transform: capitalize;
-    }
-
-    .btnLogin {
-      border: none;
-      background-color: green;
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 10px;
-      cursor: pointer;
-
-      &:focus {
-        outline: none;
+        &:focus {
+          outline: none;
+        }
       }
     }
   }
